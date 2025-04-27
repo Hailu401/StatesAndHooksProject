@@ -9,7 +9,10 @@ let {count} = this.props.value
 
     return (
       <>
-        <h1>Count:{count}</h1>
+        <div className="">
+          <h1>All clicks counter : {count}</h1>
+          
+        </div>
       </>
     );
   }
