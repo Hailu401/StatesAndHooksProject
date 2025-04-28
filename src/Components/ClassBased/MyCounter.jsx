@@ -9,19 +9,19 @@ export default class MyCounter extends Component {
     super();
     this.state = {
       count: 0,
-      even: 0
-      
+      even: 0,
     };
+    
   }
   allClicksCounter = () => {
     this.setState((counter) => {
       return { count: counter.count + 1 };
     });
-    // console.log("you clicked me");
+  
     // question 2
-    this.setState((prevState) => {
-      if (prevState.count % 2 === 0) {
-        return { even: prevState.count };
+    this.setState((countState) => {
+      if (countState.count % 2 === 0) {
+        return { even: countState.count };
       }
     });
   };
@@ -36,9 +36,10 @@ export default class MyCounter extends Component {
           <button className="btn" onClick={this.allClicksCounter}>
             Click me
           </button>
+          {/* <CounterDisplayer count={this.state.count} /> */}
 
           <CounterDisplayer value={{ count: this.state.count }} />
-          <EvenCounterDisplayer even={{ even: this.state.even}} />
+          <EvenCounterDisplayer even={{ even: this.state.even }} />
         </div>
       </>
     );

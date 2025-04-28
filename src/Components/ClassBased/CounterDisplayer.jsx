@@ -5,13 +5,14 @@ export default class CounterDisplayer extends Component {
   render() {
     // console.log(this.props);
 let {count} = this.props.value
-    // console.log(valueCount);
+    
 
     return (
       <>
-        <div className="">
+        <div>
           <h1>All clicks counter : {count}</h1>
-          
+
+          {/* <h1>All clicks counter : {this.props.count}</h1> */}
         </div>
       </>
     );
